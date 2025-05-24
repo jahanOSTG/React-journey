@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        "use strict";
        // let a=34;
        // let a='I am Janie';
        let a=45;
@@ -19,7 +20,7 @@
         function hello(){
             console.log("Hey Janie");
         }
-        let obj={
+        let obj={ 
             r:34,
             m:64,
             func: function myfunc(number){
@@ -33,10 +34,24 @@
             console.log(con);
 
         })
+        let arr=[34,21,23];
+        console.log(this);
+        let mobj={ 
+            a:this,
+            myfunc: function(number){
+                console.log(this);
+            }
+        }
+        mobj.myfunc();  // Fixed typo here
+        console.log(mobj.a);
+
+        setTimeout(()=>{
+            console.log("i am fine");
+        },3000);
+        console.log("Hei,How are You?");
     </script>
 </head>
 <body>
-    <h1>    I am learning  react  </h1>
-   
+    <h1>    I am learning react  </h1>
 </body>
 </html>
